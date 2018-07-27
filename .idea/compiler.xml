@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="onlinedu-bean" />
+        <module name="onlinedu-common-util" />
+        <module name="onlinedu-course-service" />
+        <module name="onlinedu-course-web" />
+        <module name="onlinedu-interface" />
+        <module name="onlinedu-manage-service" />
+        <module name="onlinedu-manage-web" />
+        <module name="onlinedu-service-util" />
+        <module name="onlinedu-student-service" />
+        <module name="onlinedu-student-web" />
+        <module name="onlinedu-web-util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="onlinedu-bean" target="1.8" />
+      <module name="onlinedu-common-util" target="1.8" />
+      <module name="onlinedu-course-service" target="1.8" />
+      <module name="onlinedu-course-web" target="1.8" />
+      <module name="onlinedu-interface" target="1.8" />
+      <module name="onlinedu-manage-service" target="1.8" />
+      <module name="onlinedu-manage-web" target="1.8" />
+      <module name="onlinedu-parent" target="1.8" />
+      <module name="onlinedu-service-util" target="1.8" />
+      <module name="onlinedu-student-service" target="1.8" />
+      <module name="onlinedu-student-web" target="1.8" />
+      <module name="onlinedu-web-util" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

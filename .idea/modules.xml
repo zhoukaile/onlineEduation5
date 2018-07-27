@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/onlineEduation5.iml" filepath="$PROJECT_DIR$/onlineEduation5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-bean/onlinedu-bean.iml" filepath="$PROJECT_DIR$/onlinedu-bean/onlinedu-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-common-util/onlinedu-common-util.iml" filepath="$PROJECT_DIR$/onlinedu-common-util/onlinedu-common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-course-service/onlinedu-course-service.iml" filepath="$PROJECT_DIR$/onlinedu-course-service/onlinedu-course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-course-web/onlinedu-course-web.iml" filepath="$PROJECT_DIR$/onlinedu-course-web/onlinedu-course-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-interface/onlinedu-interface.iml" filepath="$PROJECT_DIR$/onlinedu-interface/onlinedu-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-manage-service/onlinedu-manage-service.iml" filepath="$PROJECT_DIR$/onlinedu-manage-service/onlinedu-manage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-manage-web/onlinedu-manage-web.iml" filepath="$PROJECT_DIR$/onlinedu-manage-web/onlinedu-manage-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-parent/onlinedu-parent.iml" filepath="$PROJECT_DIR$/onlinedu-parent/onlinedu-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-service-util/onlinedu-service-util.iml" filepath="$PROJECT_DIR$/onlinedu-service-util/onlinedu-service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-student-service/onlinedu-student-service.iml" filepath="$PROJECT_DIR$/onlinedu-student-service/onlinedu-student-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-student-web/onlinedu-student-web.iml" filepath="$PROJECT_DIR$/onlinedu-student-web/onlinedu-student-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinedu-web-util/onlinedu-web-util.iml" filepath="$PROJECT_DIR$/onlinedu-web-util/onlinedu-web-util.iml" />
+    </modules>
+  </component>
+</project>

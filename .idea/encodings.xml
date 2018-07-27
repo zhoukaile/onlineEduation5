@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/onlinedu-bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-common-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-course-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-course-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-manage-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-manage-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-service-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-student-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-student-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/onlinedu-web-util" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
