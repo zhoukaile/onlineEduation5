@@ -1,0 +1,428 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/font/iconfont.css">
+    <script src="/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/pagination.css">
+
+    <style>
+        .tree li {
+            list-style-type: none;
+            cursor:pointer;
+        }
+        table tbody tr:nth-child(odd){background:#F4F4F4;}
+        table tbody td:nth-child(even){color:#C00;}
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div><a class="navbar-brand" style="font-size:32px;" href="#">掌门教育 - 学生管理</a></div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li style="padding-top:8px;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li style="margin-left:10px;padding-top:8px;">
+                    <button type="button" class="btn btn-default btn-danger">
+                        <span class="glyphicon glyphicon-question-sign"></span> 帮助
+                    </button>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div class="tree">
+                <ul style="padding-left:0px;" class="list-group">
+                    <li class="list-group-item tree-closed" >
+                        <a href="main.html"><i class="glyphicon glyphicon-dashboard"></i> 控制面板</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="glyphicon glyphicon glyphicon-tasks"></i> 学员管理 <span class="badge" style="float:right">3</span></span>
+                        <ul style="margin-top:10px;">
+                            <li style="height:30px;">
+                                <a href="index.html" style="color:red;"><i class="glyphicon glyphicon-user"></i>学员列表</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="role.html"><i class="glyphicon glyphicon-king"></i> 角色维护</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="permission.html"><i class="glyphicon glyphicon-lock"></i> 许可维护</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item tree-closed">
+                        <span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span>
+                        <ul style="margin-top:10px;display:none;">
+                            <li style="height:30px;">
+                                <a href="auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="auth_adv.html"><i class="glyphicon glyphicon-check"></i> 广告审核</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="auth_project.html"><i class="glyphicon glyphicon-check"></i> 项目审核</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item tree-closed">
+                        <span><i class="glyphicon glyphicon-th-large"></i> 业务管理 <span class="badge" style="float:right">7</span></span>
+                        <ul style="margin-top:10px;display:none;">
+                            <li style="height:30px;">
+                                <a href="cert.html"><i class="glyphicon glyphicon-picture"></i> 资质维护</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="type.html"><i class="glyphicon glyphicon-equalizer"></i> 分类管理</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="process.html"><i class="glyphicon glyphicon-random"></i> 流程管理</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="advertisement.html"><i class="glyphicon glyphicon-hdd"></i> 广告管理</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="message.html"><i class="glyphicon glyphicon-comment"></i> 消息模板</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="project_type.html"><i class="glyphicon glyphicon-list"></i> 项目分类</a>
+                            </li>
+                            <li style="height:30px;">
+                                <a href="tag.html"><i class="glyphicon glyphicon-tags"></i> 项目标签</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item tree-closed" >
+                        <a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form class="form-inline" role="form" style="float:left;">
+
+                        <!--搜索框=================================-->
+
+                        <div class="form-group has-feedback">
+                            <div class="input-group">
+                                <input class="form-control has-success" type="text" style="width: 50%" placeholder="邮箱/手机/昵称/姓名">
+                                <div class="dropdown">
+                                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">请选择状态
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">正常</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">冻结</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input class="form-control has-success" type="text" style="width: 15%" placeholder="开始时间">-<input class="form-control has-success" type="text" style="width: 15%" placeholder="结束时间">
+                            <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查找学员</button>
+                            <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 清空</button>
+                            <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 导出Excel</button>
+
+                        </div>
+
+
+
+                    </form>
+                    <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
+                    <button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='add.html'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
+                    <br>
+                    <hr style="clear:both;">
+                    <div class="table-responsive">
+                        <table class="table  table-bordered">
+                            <thead>
+                            <tr>
+                                <th width="5%">编号</th>
+                                <th width="10%">邮箱</th>
+                                <th width="10%">手机号</th>
+                                <th width="10%">用户名</th>
+                                <th width="10%">昵称</th>
+                                <th width="10%">性别</th>
+                                <th width="10%">年龄</th>
+                                <th width="10%">注册时间</th>
+                                <th width="10%">状态</th>
+                                <th width="15%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="eduUser:${eduUserList}">
+                                <td width="5%" th:text="${eduUser.userId}">编号</td>
+                                <td width="10%" th:text="${eduUser.email}">邮箱</td>
+                                <td width="10%" th:text="${eduUser.mobile}">手机号</td>
+                                <td width="10%" th:text="${eduUser.userName}">用户名</td>
+                                <td width="10%" th:text="${eduUser.showName}">昵称</td>
+                                <td width="10%" th:text="${eduUser.sex}==1?'男':'女'">性别</td>
+                                <td width="10%" th:text="${eduUser.age}">年龄</td>
+                                <td width="10%" th:text="${eduUser.createTime}">注册时间</td>
+                                <td width="10%" th:text="${eduUser.isAvalible}==1?'正常':'冻结'">状态</td>
+                                <td width="15%">
+                                   <!-- <a onclick="test();" href="javascript:;">修改密码</a>-->
+                                    <!--<button class="btn btn-success btn-xs" data-toggle="modal" ></button>-->
+                                    <button th:value="${eduUser.userId}" class="btn btn-success btn-xs" data-toggle="modal" data-target="#changeSource">修改密码</button>
+                                    <button   th:name="${eduUser.isAvalible}"  th:value="${eduUser.userId}" th:text="${eduUser.isAvalible}==1?'冻结':'解冻'"  class="btn btn-danger btn-xs btn-jiedong" data-toggle="modal" data-target="#deleteUser">冻结</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr >
+                                <td colspan="10" align="center">
+                                    <ul class="pagination">
+                                        <li class="disabled"><a href="#">上一页</a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">下一页</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--修改密码出窗口-->
+<div class="modal fade" id="changeSource" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div style="padding: 50px 0;margin-top: 50px;background-color: #fff; text-align: right;width: 420px;margin: 50px auto;">
+            <form class="form-horizontal">
+               <!-- <div class="form-group">
+                    <label for="sKnot" class="col-xs-4 control-label">原密码：</label>
+                    <div class="col-xs-5">
+                        <input type="" class="form-control input-sm duiqi" id="sKnot" placeholder="" style="margin-top: 7px;">
+                    </div>
+                </div>-->
+                <div class="form-group">
+                    <label for="sKnot" class="col-xs-4 control-label">新密码：</label>
+                    <div class="col-xs-5">
+                        <input type="" class="form-control input-sm duiqi" id="sKnot" placeholder="" style="margin-top: 7px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sKnot" class="col-xs-4 control-label">重复密码：</label>
+                    <div class="col-xs-5">
+                        <input type="" class="form-control input-sm duiqi" id="sKnot" placeholder="" style="margin-top: 7px;">
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <div class="col-xs-offset-4 col-xs-5" style="margin-left: 169px;">
+                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                        <button type="submit" class="btn btn-xs btn-green">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<!--弹出删除用户警告窗口-->
+<div class="modal fade" id="deleteUser" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+                    <!--要冻结该学生用户吗？-->
+                    <h4 class="modal-titles"></h4>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+
+                <button type="button"   id="dongjie"     class="btn btn-danger btn-xs">冻 结</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+</div>
+
+
+
+<script src="jquery/jquery-2.1.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="jquery/jquery.pagination.js"></script>
+<script src="jquery/layer/layer.js"></script>
+<!--<script src="script/docs.min.js"></script>-->
+
+<script type='text/javascript' language='javascript'>
+    $(".btn-jiedong").click(function(){
+        //获取button的name增值
+        var isAvalible =$(this).attr("name");
+        var a = "";
+        if("1"==isAvalible){
+            a = "冻结";
+        }else {
+            a = "解冻";
+        }
+        //获取点击按钮的value值
+        var userId = $(this).val();
+        $(".modal-titles").html("要"+a+"\""+userId+"\"学生用户吗？");
+        //修改按钮的值
+        $("#dongjie").text(a);
+
+        $("#dongjie").click(function(){
+            //走控制器
+            window.location.href = "/dongjie?userId="+userId;
+        });
+
+    });
+</script>
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".list-group-item").click(function(){
+            if ( $(this).find("ul") ) {
+                $(this).toggleClass("tree-closed");
+                if ( $(this).hasClass("tree-closed") ) {
+                    $("ul", this).hide("fast");
+                } else {
+                    $("ul", this).show("fast");
+                }
+            }
+        });
+    });
+    /*$("tbody .btn-success").click(function(){
+        window.location.href = "/index";
+    });
+     */
+    /*$("tbody .btn-danger").click(function(){
+        window.location.href = "edit.html";
+       alert(this.val());
+    });*/
+
+   /* $("#dongjie").click(function(){
+        window.location.href = "/dongjie?${}";
+    });*/
+
+
+
+    //================================================
+    var pagesize = 2;
+    function pageQuery(pageIndex) {
+
+        var pageno = pageIndex + 1;
+
+        var loadingIndex = -1;
+
+        var jsonData = {
+            "pageno" : pageno,
+            "pagesize" : pagesize
+        };
+
+        $.ajax({
+            type : "POST",
+            url  : "/loadPageData",
+            data : jsonData,
+            beforeSend : function() {
+                loadingIndex = layer.load(2, {time: 10*1000});
+            },
+            success :  function(result) {
+                layer.close(loadingIndex);
+                // 获取用户集合数据
+                var pageObj = result.data;
+                var list = pageObj.datas;
+                var content = "";
+                $.each(list, function(index, map){
+                    content += '<tr>';
+                    content += '    <td>'+(index+1)+'</td>';
+                    content += '    <td><input type="checkbox" value="'+map.pdId+'"></td>';
+                    content += '    <td>'+map.pdKey+'</td>';
+                    content += '    <td>'+map.pdName+'</td>';
+                    content += '    <td>'+map.pdVersion+'</td>';
+                    content += '    <td>';
+                    content += '        <button type="button" onclick="window.location.href=\'${APP_PATH}/process/view?id='+map.pdId+'\'" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>';
+                    content += '        <button type="button" onclick="deleteProcDef('+map.pdDeployId+', \''+map.pdName+'\')" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>';
+                    content += '    </td>';
+                    content += '</tr>';
+                });
+
+                $("tbody").html(content);
+
+                $("#Pagination").pagination(pageObj.totalsize, {
+                    num_edge_entries: 1, //边缘页数
+                    num_display_entries: 4, //主体页数
+                    callback: pageQuery,
+                    prev_text:"上一页",
+                    next_text:"下一页",
+                    current_page:pageIndex,
+                    items_per_page:pagesize
+                });
+            }
+
+        });
+    }
+</script>
+
+
+
+</body>
+</html>

@@ -31,6 +31,7 @@
       <module name="onlinedu-service-util" target="1.8" />
       <module name="onlinedu-student-service" target="1.8" />
       <module name="onlinedu-student-web" target="1.8" />
+      <module name="onlinedu-text-t" target="1.8" />
       <module name="onlinedu-web-util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
